@@ -11,6 +11,9 @@
 - Yeoman
 - grunt & Gulp
 
+- 비동기 프로그래밍
+
+
 ---
 ## Node.js &
 
@@ -25,6 +28,7 @@ $> ./configure
 $> make
 $> make install
 
+2. 실행 REPL
 $> node
 ```
 
