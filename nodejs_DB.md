@@ -2,7 +2,7 @@
 
 ### FileSystem
 - CLI task
-```
+```javascript
 var fs = require('fs');
 var path = require('path');
 var args = process.argv.splice(2);
@@ -66,7 +66,7 @@ function addTask(file, taskDescription) {
 ### RDBMS
 - MySQL
 
-```
+```javascript
 ---- timetrack.js
 var http = require('http');
 var work = require('./lib/timetrack');
@@ -252,7 +252,7 @@ exports.workDeleteForm = function(id) {
 ### NoSQL
 - Redis
    - Redis Basic
-```
+```javascript
 var redis = require('redis');
 var client = redis.createClient(6379, '127.0.0.1');
 
@@ -292,7 +292,7 @@ client.lrange('tasks', 0, -1, function(err, items) {
 ```
 
    - Redis pub/sub
-```
+```javascript
 var net = require('net');
 var redis = require('redis');
 
@@ -325,7 +325,7 @@ var server = net.createServer(function(socket) {
 server.listen(3000);
 ```
 - MongoDB
-```
+```javascript
 var mongodb = require('mongodb');
 var server = new mongodb.Server('127.0.0.1', 27017, {});
 var client = new mongodb.Db('mydatabase', server, {w: 1});
@@ -361,8 +361,7 @@ client.open(function(err) {
 ```
 
 - mongoose
-
-```
+```javascript
 var mongoose = require('mongoose');
 var db = mongoose.connect('mongodb://localhost/tasks');
 

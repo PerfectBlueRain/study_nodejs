@@ -2,7 +2,7 @@
 
 ### RESTful 웹서비스
 - CRUD : GET, POST, DELETE, PUT
-```
+```javascript
 var http = require('http');
 var items = [];
 
@@ -29,7 +29,7 @@ server.listen(3000);
 
 ### 정적파일 서비스하기
 - stream.on()
-```
+```javascript
 var http = require('http');
 var parse = require('url').parse;
 var join = require('path').join;
@@ -53,7 +53,7 @@ server.listen(3000);
 ```
 
 - stream.pipe()
-```
+```javascript
 var server = http.createServer(function(req, res){
   var url = parse(req.url);
   var path = join(root, url.pathname);

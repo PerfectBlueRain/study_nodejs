@@ -1,7 +1,7 @@
 # Web : Middleware
 ## Connect
 - 인증 미들웨어 : authentication.js
-```
+```javascript
 var connect = require('connect');
 
 function logger(req, res, next) {
@@ -60,7 +60,7 @@ connect()
 
 - router 미들웨어 컴포넌트
    - router_example.js
-```
+```javascript
 var connect = require('connect');
 var router = require('./middleware/router');
 var routes = {
@@ -84,7 +84,7 @@ connect()
   .listen(3000);
 ```
    - middleware/router.js
-```
+```javascript
 var parse = require('url').parse;
 
 module.exports = function route(obj) {
@@ -117,7 +117,7 @@ module.exports = function route(obj) {
 ```
 
 - Error Handling 미들웨어
-```
+```javascript
 var connect = require('connect');
 
 function badMiddleware(req, res, next) {

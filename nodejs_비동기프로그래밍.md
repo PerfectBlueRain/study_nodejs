@@ -11,7 +11,7 @@
 
 ## 콜백
 - 일회성 응답에 대한 로직을 정의하는 데 사용
-```
+```javascript
 // callback_example.js
 var http = require('http');
 var fs = require('fs');
@@ -45,7 +45,7 @@ http.createServer(function(req, res) {
 }).listen(8000, "127.0.0.1");
 ```
 
-```
+```javascript
 // reducing_nesting_by_returning_early.js
 var http = require('http');
 var fs = require('fs');
@@ -84,7 +84,7 @@ function hadError(err, res) {
 ## 이벤트 리스너
 - 기본적으로 개념적인 요소(이벤트)에 연관된 콜백
 - events모듈
-```
+```javascript
 // pubsub.js
 var events = require('events')
   , net = require('net');
@@ -132,12 +132,9 @@ var server = net.createServer(function (client) {
 server.listen(8888);
 ```
 
-
-
-
 ## 비동기 로직의 순서 배열
 - 직렬 흐름 제어
-```
+```javascript
 // random_story.js
 var fs = require('fs');
 var request = require('request');
@@ -206,8 +203,9 @@ function next(err, result) {
 
 next();
 ```
+
 - 병렬 흐름 제어
-```
+```javascript
 // word_count.js
 var fs = require('fs');
 var completedTasks = 0;
@@ -259,7 +257,7 @@ fs.readdir(filesDir, function(err, files) {
 ```
 
 - nimble
-```
+```javascript
 var flow = require('nimble');
 
 flow.series([

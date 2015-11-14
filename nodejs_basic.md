@@ -1,6 +1,6 @@
 ## Web
 - basic HTTP server
-```
+```javascript
 var http = require('http');  // HTTP server
 var server = http.createServer();
 
@@ -14,7 +14,7 @@ console.log('Server running at http://localhost:3000/');
 ```
 
 - Streaming Data
-```
+```javascript
 var http = require('http');  // HTTP server
 var fs = require('fs'); // Streaming Data
 
